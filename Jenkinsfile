@@ -6,8 +6,6 @@ pipeline {
             steps {
                 echo "Building branch: ${env.BRANCH_NAME}"
                 // Create venv and install requirements
-                // We use '&&' to ensure commands run in the same shell session context logic if needed, 
-                // but usually inside one sh block is safest for activation.
                 sh '''
                     python3 -m venv venv
                     . venv/bin/activate
